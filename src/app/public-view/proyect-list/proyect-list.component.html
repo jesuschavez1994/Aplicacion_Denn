@@ -1,0 +1,111 @@
+<app-header *ngIf="login === null"></app-header>
+<app-header-profile *ngIf="login === 'true' "></app-header-profile>
+
+
+<div class="row m-0 border border-white">
+  <div class="wow animate__backInLeft col-12 col-md-12 p-3 p-md-12 bg-light border border-white d-flex align-items-center align-items-md-start">
+    <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+        <h2 class="family-700 black size-45">Transmisor</h2>
+        <p class="lead family-500">
+          La salida de un modulador de FSK binario, es una función escalón en el dominio
+          del tiempo. Conforme cambia la señal de entrada binaria de 0 lógico a 1 lógico, y
+          viceversa, la salida del FSK se desplaza entre dos frecuencias: una frecuencia de
+          marca o de 1 lógico y una frecuencia de espacio o de 0 lógico. Con el FSK binario,
+          hay un cambio en la frecuencia de salida, cada vez que la condición lógica de la
+          señal de entrada binaria cambia.
+        </p>
+    </div>
+    <div class="col-md-5">
+        <img src="assets\images\transmisor.png" alt="third slide" style="display: block; width: 100%;">
+    </div>
+  </div>
+  <div class="wow animate__backInLeft col-12 col-md-12 p-3 p-md-12 bg-light border border-white d-flex align-items-center align-items-md-start mt-5">
+    <div class="col-md-7 order-md-2 d-flex flex-column align-items-center justify-content-center">
+      <h2 class="family-700 black size-45">Consideraciones de ancho de banda</h2>
+      <p class="lead"> 
+          Un modulador de FSK binario que a menudo son osciladores de voltaje controlado
+          (VCO). El más rápido cambio de entrada ocurre, cuando la entrada binaria es una
+          onda cuadrada. En consecuencia, si se considera sólo la frecuencia fundamental
+          de entrada, la frecuencia modulante más alta es igual a la mitad de la razón de bit
+          de entrada.
+          La frecuencia de reposo del VCO se selecciona de tal forma que, cae a medio
+          camino, entre las frecuencias de marca y espacio. Una condición de 1 lógico, en la
+          entrada, cambia el VCO de su frecuencia de reposo a la frecuencia de marca; una
+          condición de 0 lógico, en la entrada, cambia cl VCO de su frecuencia de reposo a
+          la frecuencia de espacio.
+      </p>
+      <h5>
+        El índice de modulación en FSK es:
+      </h5>
+      <p>
+        MI = Df / f a (2)
+        donde MI = índice de modulación (sin unidades)
+        Df = desviación de frecuencia (Hz)
+        f a = frecuencia modulante (Hz)
+        El peor caso, o el ancho de banda más amplio, ocurre cuando tanto la desviación
+        de frecuencia y la frecuencia modulante están en sus valores máximos. En un
+        modulador de FSK binario, Df es la desviación de frecuencia pico de la portadora y
+        es igual a la diferencia entre la frecuencia de reposo y la frecuencia de marca o
+        espacio. La desviación de frecuencia es constante y, siempre, en su valor máximo.
+        f a es igual a la frecuencia fundamental de entrada binaria que bajo la condición
+        del peor caso es igual a la mitad de la razón de bit (f b).En consecuencia, para el
+        FSK binario,
+        donde ï f m - f s ï/ 2 = desviación de frecuencia
+        f b = razón de bit de entrada
+        f b /2 = frecuencia fundamental de la señal de entrada binaria
+        En un FSK binario el índice de modulación, por lo general, se mantiene bajo 1.0,
+        produciendo así un espectro de salida de FM de banda relativamente angosta.
+        Debido a que el FSK binario es una forma de modulación en frecuencia de banda
+        angosta, el mínimo ancho de banda depende del índice de modulación. Para un
+        índice de modulación entre 0.5 y 1, se generan dos o tres conjuntos de
+        frecuencias laterales significativas. Por tanto, el mínimo ancho de banda es dos o
+        tres veces la razón de bit de entrada.
+      </p>
+    </div>
+  </div>
+  <div class="wow animate__backInLeft col-12 col-md-12 p-3 p-md-12 bg-light border border-white d-flex align-items-center align-items-md-start mt-5">
+    <div class="col-md-7 order-md-2 d-flex flex-column align-items-center justify-content-center">
+        <h2 class="family-700 black size-45">Transmisión de desplazamiento mínimo</h2>
+        <p class="lead"> 
+          La transmisión de desplazamiento mínimo del FSK (MSK), es una forma de
+          transmitir desplazando la frecuencia de fase continua (CPFSK). En esencia, el
+          MSK es un FSK binario, excepto que las frecuencias de marca y espacio están
+          sincronizadas con la razón de bit de entrada binario. Con MSK, las frecuencias de
+          marca y espacio están seleccionadas, de tal forma que están separadas de la
+          frecuencia central, por exactamente, un múltiplo impar de la mitad de la razón de
+          bit [f m y f s = n( f b / 2 ), con    n = entero impar]. Esto asegura que haya una
+          transición de fase fluida, en la señal de salida analógica, cuando cambia de una
+          frecuencia de marca a una frecuencia de espacio, o viceversa.
+        </p>
+    </div>
+  </div>
+  <div class="wow animate__backInLeft col-12 col-md-12 p-3 p-md-12 bg-light border border-white d-flex align-items-center align-items-md-start mt-5">
+    <div class="col-md-7 order-md-2 d-flex flex-column align-items-center justify-content-center">
+        <h2 class="family-700 black size-45">Banda reducida</h2>
+        <p class="lead"> 
+          Recibe también el nombre de banda angosta.
+          Se tiene cuando la variación de frecuencia de la señal modulada da como
+          resultado una diferencia de fase menor que PI/2. Se dice que el índice de
+          modulación es pequeño.
+          Su espectro de frecuencias es similar al de ASK. Se diferencian en que la amplitud
+          de las armónicas se ve afectada por la frecuencia, superponiéndose a la FSK.
+          Existe una coincidencia entre el ancho de banda necesario para
+          ASK y para FSK de banda reducida.
+        </p>
+    </div>
+  </div>
+  <div class="wow animate__backInLeft col-12 col-md-12 p-3 p-md-12 bg-light border border-white d-flex align-items-center align-items-md-start mt-5">
+    <div class="col-md-7 order-md-2 d-flex flex-column align-items-center justify-content-center">
+        <h2 class="family-700 black size-45">Desplazamiento de frecuencia</h2>
+        <p class="lead"> 
+          FSK es una modulación de frecuencia donde la señal moduladora (datos) es
+          digital. Los dos valores binarios se representan con dos frecuencias diferentes (f1
+          y f2) próximas a la frecuencia de la señal portadora fp.
+          Generalmente f1 y f2 corresponden a desplazamientos de igual magnitud pero en
+          sentidos opuestos de la frecuencia de la señal portadora.
+          El índice de modulación tiene gran incidencia en la señal modulada y determina
+          los dos tipos fundamentales de FSK.
+        </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<header class="mySection">
+    <nav class="areas pt-4 pl-0 navbar navbar-expand-lg navbar-custom wow animate__fadeInDown">
+        <a class="navbar-brand" [routerLink]="['/welcome']">
+            <img src="assets\images\welcome\logo rubikweb.svg" height="30" class="logo-menu-nav d-inline-block align-top" alt="" loading="lazy">
+        </a>
+        <span class="icon-three-bars navbar-toggler size-27" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"></span>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class='nav-link' [routerLink]="['/welcome']">Inicio</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class='nav-link' [routerLink]="['/services']">Servicios</a>
+                </li>
+                <!-- <li class="nav-item" routerLinkActive="active">
+          <a class='nav-link' [routerLink]="['portfolio']">Portfolio</a>
+        </li> -->
+                <li class="nav-item" routerLinkActive="active">
+                    <a class='nav-link' [routerLink]="['/projects']">Proyectos</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class='nav-link' [routerLink]="['/skills']">Habilidades</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class='nav-link' [routerLink]="['/contact']">Contáctanos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mi cuenta
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a *ngIf="admin" class="dropdown-item" [routerLink]="['/videos']">Mi cuenta</a>
+                        <a *ngIf="user" class="dropdown-item" [routerLink]="['/videos']">Mi cuenta</a>
+                        <a class="dropdown-item cursor-poniter" (click)="_userRegisterService.logout()">Cerrar Sesión</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

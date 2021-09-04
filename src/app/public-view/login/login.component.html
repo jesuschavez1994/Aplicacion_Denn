@@ -1,0 +1,62 @@
+<app-header *ngIf="login === null"></app-header>
+<app-header-profile *ngIf="login === 'true' "></app-header-profile>
+<section class="mt-5 mb-5">
+    <div class="row">
+        <form [formGroup]="forma" (ngSubmit)="formsIngresar()" novalidate="novalidate" class="col-md-10">
+
+            <h5 class="family-500 size-33 azul mb-5">Iniciar sesión</h5>
+
+            <div class="form-group row">
+                <div class="col-12 col-sm-10 col-md-10 col-lg-4">
+                    <label class="family-500">
+                                Ingrese su email
+                            </label>
+                    <input class="form-control user-name-icon" type="text" placeholder="email" formControlName="email" [ngClass]="{'is-invalid':  (!forma.controls['email'].valid || forma.controls['email'].errors?.minlength)&& forma.controls['email'].touched, 'is-valid': forma.controls['email'].valid }">
+
+                    <div *ngIf="forma.get('email').errors?.required" class="invalid-feedback">
+                        Este campo es requerido
+                    </div>
+                    <div *ngIf="forma.get('email').errors?.minlength" class="invalid-feedback">
+                        Por lo menos 5 caracteres
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group row mb-4">
+                <div class="col-12 col-sm-10 col-md-10 col-lg-4">
+                    <label class="family-500">
+                                Ingrese su contraseña
+                            </label>
+                    <input class="form-control user-name-icon" type="password" placeholder="Contraseña" formControlName="password" [ngClass]="{'is-invalid':  (!forma.controls['password'].valid || forma.controls['password'].errors?.minlength)&& forma.controls['password'].touched, 'is-valid': forma.controls['password'].valid }">
+
+                    <div *ngIf="forma.get('password').errors?.required" class="invalid-feedback">
+                        Este campo es requerido
+                    </div>
+                    <div *ngIf="forma.get('password').errors?.minlength" class="invalid-feedback">
+                        Por lo menos 8 caracteres
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <div class="col-12 col-sm-10 col-md-10 col-lg-4">
+                    <div *ngIf="error === true" class="errors">
+                        ¡Hubo un error!, verifique si el correo es correcto ó la contraseña.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="input-group col-12 col-md-8">
+                    <button [disabled]="!forma.valid" type="submit" class="btn btn-primary width-40" (click)="butonregistrar()" style="font-weight: 600;">
+                                    Ingresar
+                            </button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</section>

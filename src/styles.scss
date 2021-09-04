@@ -1,0 +1,116 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+  
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+  
+.fadeIn {animation-name: fadeIn;}
+
+
+.mySection{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.areas{width: 80%;}
+
+//****Familia Montserrat*****
+.family{font-family: 'Montserrat', sans-serif;}
+.family-300{font-family: 'Montserrat', sans-serif;font-weight: 300;}
+.family-400{font-family: 'Montserrat', sans-serif;font-weight: 400;}
+.family-500{font-family: 'Montserrat', sans-serif;font-weight: 500;}
+.family-600{font-family: 'Montserrat', sans-serif;font-weight: 600;}
+.family-700{font-family: 'Montserrat', sans-serif;font-weight: 600;}
+.family-h1{font-family: 'Montserrat', sans-serif;font-weight: 600;}
+.family-p{font-family: 'Montserrat', sans-serif;font-weight: 400;font-size: 16px;}
+
+//****Estilos divs **////
+.display-flex{display: flex;}
+.flex-direction-column{flex-direction: column;}
+.justify-content-center{justify-content: center;}
+.justify-content-flex-end{justify-content:flex-end;}
+.align-items-center{align-items: center;}
+.align-content-center{align-content: center;}
+////************************
+
+//Colores
+.black{color: black;}
+.white{color:white;}
+.red{color:red;}
+.blue{color:blue;}
+.yellow{color:yellow;}
+.green{color:green;}
+
+//*** ///
+.f-bold{font-weight: bold;}
+.f-regular{font-weight:normal;}
+//***********
+
+//****Font-size-5x1///
+.size-50{font-size: 50px;}
+.size-45{font-size: 45px;}
+.size-40{font-size: 40px;}
+.size-30{font-size: 30px;}
+.size-35{font-size: 35px;}
+.size-25{font-size: 25px;}
+.size-20{font-size: 20px;}
+.size-15{font-size: 15px;}
+.size-10{font-size: 10px;}
+.size-5{font-size: 5px;}
+
+//Font-size-3x1
+.size-36{font-size: 36px;}
+.size-33{font-size: 33px;}
+.size-27{font-size: 27px;}
+.size-24{font-size: 24px;}
+.size-21{font-size: 21px;}
+.size-18{font-size: 18px;}
+.size-12{font-size: 12px;}
+.size-9{font-size: 9px;}
+.size-6{font-size: 6px;}
+.size-3{font-size: 3px;}
+//****************************
+
+//***
+.padding-bottom-15{padding-bottom: 15px;}
+.margin-bootom-0px{margin-bottom: 0px;}
+.info-bio{font-family: 'Montserrat', sans-serif;font-weight: 500;}
+.text-end{text-align: end;}
+
+//footer
+
+footer {
+	background-color:#1A1A1A;
+	height: 50%;
+  color: white;
+  padding: 15px;
+}
+
+.main1 { 
+  display:flex;
+  margin:0 auto;
+}
+
+a img:hover {color: #fff;}
+
+//STyles phone 
+.phone-display-none{display: none;}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

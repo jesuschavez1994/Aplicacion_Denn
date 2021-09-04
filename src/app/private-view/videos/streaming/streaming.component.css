@@ -1,0 +1,7 @@
+.vjs-has-started .vjs-control-bar {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    background-color: #2BB33F;
+    transition: visibility 0.1s, opacity 0.1s;
+}

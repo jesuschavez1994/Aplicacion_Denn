@@ -1,0 +1,120 @@
+<app-header *ngIf="login === null"></app-header>
+<app-header-profile *ngIf="login === 'true' "></app-header-profile>
+<div class="row m-0 border border-white">
+    <div class="wow animate__backInLeft col-12 col-md-12 p-3 p-md-12 bg-light border border-white d-flex align-items-center align-items-md-start">
+        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+            <h2 class="family-700 black size-45">Diferencia entre comunicación digital y análogica</h2>
+            <p class="lead family-500">
+                La comunicación digital y analógica es parte de la comunicación humana. La
+                analógica se da por medio de señas, gestos, comportamiento, etc. Por lo tanto
+                esto abre la posibilidad de que dos personas que no comparten un mismo idioma
+                puedan comunicarse, esto  radica en el carácter universal de la comunicación
+                analógica.
+                Por otro lado la comunicación digital no es tan universal, pues requiere que ambas
+                personas compartan los mismos códigos para lograr interactuar. A pesar de esto
+                la comunicación posee un nivel relacional y uno de contenido que son
+                interdependientes y complementarios. El aspecto relativo al contenido se transmite
+                en forma predominantemente digital, mientras que el aspecto relacional es de
+                naturaleza predominantemente analógica.
+            </p>
+        </div>
+        <div class="col-md-5">
+            <img src="assets\images\Analogico_vs_digital.png" alt="third slide" style="display: block; width: 100%;">
+        </div>
+    </div>
+    <div class="wow animate__backInLeft col-12 col-md-12 p-3 p-md-12 bg-light border border-white d-flex align-items-center align-items-md-start mt-5">
+        <div class="col-md-7 order-md-2 d-flex flex-column align-items-center justify-content-center">
+            <h2 class="family-700 black size-45">Modulación ASK</h2>
+            <p class="lead"> 
+                Modulación por Desplazamiento de Amplitud. Es una modulación de amplitud donde
+                la señal moduladora (datos) es digital. Los dos valores binarios (0 y 1) se representan
+                con dos amplitudes diferentes y es usual que una de las dos amplitudes sea cero, es
+                decir uno de los dígitos binarios se representa mediante la presencia de la portadora a
+                amplitud constante, y el otro dígito se representa mediante la ausencia de la señal
+                portadora, en este caso la frecuencia y la fase se mantiene constante.
+                La modulación en ASK no es otra cosa que una variante de la modulación en AM que
+                se adapta perfectamente a las condiciones de los sistemas digitales, además de que
+                les permite trabajar sobre una sola frecuencia de transmisión en vez de tener que
+                lidiar con pulsos cuadrados que contienen componentes en todas las frecuencias del
+                espectro.
+                Su recuperación también resulta ser más sencilla, dado que sólo depende de
+                sincronizar la frecuencia de las señales sinusoidales que sirven de portadoras y
+                regeneradoras dependiendo si se hallan en el modulador o el demodulador.
+                El ASK por sí sólo, a pesar de todas estas consideraciones, no es uno de los métodos
+                más utilizados debido a que para cada frecuencia es necesario realizar un circuito
+                independiente, además de que sólo puede transmitirse un solo bit al mismo tiempo en
+                una determinada frecuencia. Otro de los inconvenientes es que los múltiplos de una
+                frecuencia fundamental son inutilizables y que este tipo de sistemas son susceptibles
+                al ruido.
+            </p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img src="assets\images\ASK.jpg" alt="third slide" style="display: block; width: 100%;">
+        </div>
+    </div>
+    <div class="wow animate__backInLeft col-12 col-md-12 p-3 p-md-12 bg-light border border-white d-flex align-items-center align-items-md-start">
+        <div class="col-md-7 d-flex flex-column align-items-center justify-content-center">
+            <h2 class="family-700 black size-45">Modulación FSK</h2>
+            <p class="lead family-500">
+                Es un tipo de modulación de frecuencia cuya señal modulante es un flujo de
+                pulsos binarios que varía entre valores predeterminados. En los sistemas de
+                modulación por salto de frecuencia. La señal moduladora hace variar la frecuencia
+                de la portadora, de modo que la señal modulada resultante codifica la información
+                asociándola a valores de frecuencia diferentes.
+            </p>
+        </div>
+        <div class="col-md-5">
+            <img src="assets\images\image_FSK.png" alt="third slide" style="display: block; width: 100%;">
+        </div>
+    </div>
+    <div class="col-md-7 order-md-2 d-flex flex-column align-items-center justify-content-center mt-5">
+        <h2 class="family-700 black size-45">Forma de la modulación</h2>
+        <p class="lead"> 
+            El FSK binario es una Forma de modulación angular de amplitud constante, similar
+            a la modulación en frecuencia convencional, excepto que la señal modulante es un
+            flujo de pulsos binarios que varía, entre dos niveles de voltaje discreto, en lugar de
+            una forma de onda analógica que cambia de manera continua. La expresión
+            general para una señal FSK binaria es
+            v(t) = V c cos [ ( w c + v m(t) D w / 2 )t ] (1)
+            donde v(t) = forma de onda FSK binaria
+            V c = amplitud pico de la portadora no modulada
+            w c = frecuencia de la portadora en radianes
+            v m(t) = señal modulante digital binaria
+            D w = cambio en frecuencia de salida en radianes
+            El salto de frecuencia ∆f alrededor de la frecuencia central f de la portadora, se
+            denomina genéricamente en cualquier sistema de FM “desviación de frecuencia” y
+            es un valor constante del que depende el ancho de banda de la señal modulada.
+        </p>
+        <p  class="lead">
+            El modulador más simple de FM es un conmutador que selecciona entre dos
+            portadoras de frecuencias f0 y f1 al ritmo que marca la señal moduladora.
+            Este tipo de modulación por conexión y desconexión se denomina “conmutación
+            de variación de frecuencia” o “conmutación de variación de portadora”.
+            La expresión general de una señal FSK cuando la moduladora X(t) utiliza un
+            código multinivel es: A sen 2PI (f + X(t) ∆f)t
+            El que la amplitud de la señal modulada sea constante y que la información se
+            codifique con valores de frecuencia, hace que la señal FSK sea casi inmune al
+            ruido aditivo del canal, dado que éste afecta sobre todo a la amplitud.
+            La modulación ASK tiene el inconveniente de que es muy sensible al ruido que se
+            acumula a lo largo del canal, por lo que la relación señal-ruido (S/N) a la entrada
+            del receptor puede ser tan baja, que la probabilidad de error no sea tolerable. Esta
+            es la causa por la que no se utiliza la modulación ASK para transmitir datos a alta
+            velocidad a menos que el medio de transmisión garantice una adecuada S/N,
+            como en el caso de la fibra óptica.
+            Sin embargo, a la modulación FSK no le afecta el ruido aditivo del canal, dado que
+            la señal modulada codifica la información con los cambios de frecuencia, es decir,
+            el receptor sólo tiene que contar el número de cruces por cero de la señal que
+            recibe. Por tanto, suprime el ruido simplemente recortando la amplitud de la señal
+            FSK, sin que ello afecte a la información.
+            Sólo cuando el nivel de ruido es tan alto que llega a forzar el paso por cero de la
+            señal, es cuando se producen errores. Esto es tanto como suponer que S/N =
+            0dB, es decir, S = N.
+            El comportamiento frente al ruido de las señales moduladas en frecuencia es
+            mucho mejor que el de las señales moduladas en amplitud, pero a cambio, el
+            ancho de banda de las señales FM es mayor que el de las señales AM.
+        </p>
+    </div>
+    <div class="col-md-5 order-md-1">
+        <img src="assets\images\formas_de_modulacion.png" alt="third slide" style="display: block; width: 100%;">
+    </div>
+</div>

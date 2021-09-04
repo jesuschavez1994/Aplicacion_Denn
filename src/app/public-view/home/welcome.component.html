@@ -1,0 +1,30 @@
+<app-header *ngIf="login === null" class="z-index-10 width-100"></app-header>
+<app-header-profile *ngIf="login === 'true' " class="z-index-10 width-100"></app-header-profile>
+
+<section class="mySection">
+    <div class="areas wow slideInLeft">
+        <div class="mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <p class="family f-bold size-50 black margin-bootom-0px phone-p">COMUNICACION DIGITAL</p>
+                   
+                </div>
+                <div class="col-md-8 col-6">
+                    <p class="family f-bold size-50 black margin-bootom-0px phone-display-none">¿Tienes un proyecto</p>
+                    <p class="family f-bold size-50 black phone-display-none">o una idea en mente?</p>
+                    <p class="family-400 mt-3 size-21 black mb-5">
+                        {{texto}}
+                    </p>
+                    <img class="flecha" src="{{flecha}}" width="100%">
+                </div>
+                <div class="col-md-4 col-6">
+                    <img class="cubo-completo animated fadeIn fast" src="{{img}}" width="100%">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- components-->
+<app-areas class="wow slideInLeft"></app-areas>
+<app-perfomance class="wow slideInLeft"></app-perfomance>

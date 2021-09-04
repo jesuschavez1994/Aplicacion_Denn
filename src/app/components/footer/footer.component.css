@@ -1,0 +1,101 @@
+.redes-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pull-right{
+    width: 100%;
+}
+.content-logo-footer{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-top: 2%;
+}
+.text-low-footer{
+    text-align: end;
+    width: 100%;
+    padding-right: 11%;
+    margin-top:3px;
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.img-footer{
+    box-sizing: border-box;
+    padding-top: 2%;
+}
+.contact{
+    font-size: 14px;
+}
+.contact-h5{
+    font-size: 14px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.content-contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.content-span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Copyright{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+}
+.logo-redes1{
+    font-size: 30px;
+}
+.logo-redes2{
+    font-size: 28px;
+}
+.content-redes{
+    display: flex;
+    align-items: center;
+}
+.line-column{
+    width: 1px; 
+    height:40px; 
+    background:rgb(168, 168, 168);
+}
+.instagram{cursor: pointer;}
+.facebook{cursor: pointer;}
+.linkedin{cursor: pointer;}
+.icon-social-instagram-outline:hover{color: #F09207;}
+.icon-facebook:hover{color: #F09207;}
+.icon-linkedin-1:hover{color: #F09207;}
+
+h5{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width:300px) and (max-width:550px){
+    .with-img{width: 40%;}
+    .content-contact{flex-direction: column;}
+    .line-column{display: none;}
+    .redes-phone{display: none;}
+    .phone-display-none-logo{display: none;}
+    .content-redes{padding-top: 0px !important;}
+    h5{font-size: 14px;}
+    .Copyright{text-align: center;margin-top: 7px;}
+    .derechos{padding: 0px !important;}
+}
+
+@media(min-width:551px) and (max-width:5000px){
+    .redes-pc{display: none;}
+}

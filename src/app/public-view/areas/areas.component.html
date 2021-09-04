@@ -1,0 +1,48 @@
+
+<section class="mySection">
+  <div class="areas">
+    <div class="row">
+      <div class="col-md padding-0">
+        <h2 class="family-condensed size-36 mt-5 mb-5 black space">
+          {{title}}
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 pb-4 rubik_left">
+        <img class="imgLeft" src="{{imgLeft}}" width="100%">
+      </div>
+      <div class="col-md-9">
+        <div class="card-deck">
+          <div class="card cards-phone" *ngFor="let info of card; let i = index">
+            <img class="cards-img-phone card-img-top mt-3" src="{{info.img}}"  alt="{{info.title}}" width="100" height="100">
+            <div class="card-body">
+              <h5 class="card-title">{{ info.title}}</h5>
+              <p class="card-text info-bio">{{info.bio}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="mySection ">
+  <div class="areas mt-3" *ngFor="let item of equipo">
+    <div class="row">
+      <div class="col-md-8 pr-0 display-flex justify-content-center flex-direction-column">
+        <h2 class="family f-bold black text-end size-30 pb-3">
+          {{item.titleEquipo}}
+        </h2>
+        <p class="family-500 size-18 black text-end text">{{item.text}}</p>
+      </div>
+      <div class="col-md-4 display-flex justify-content-flex-end rubik_right">
+        <img class="imgRight" src="{{item.imgRight}}">
+      </div>
+    </div>
+  </div>
+</section>
+
+

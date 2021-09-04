@@ -1,0 +1,15 @@
+<app-header-profile *ngIf="login === 'true' "></app-header-profile>
+<div class="row m-0 border border-white d-flex justify-content-center">
+    <div class=" wow animate__backInLeft col-12 col-md-10 p-md-5 d-flex justify-content-center">
+        <video id="my-video" class="video-js vjs-default-button vjs-big-play-centered " controls playsinline preload="auto " data-setup="{} ">
+            <source src="{{this.url}} " type="application/x-mpegURL "/>
+            <p class="vjs-no-js ">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/ " target="_blank "
+                >supports HTML5 video</a
+                >
+            </p>
+        </video>
+    </div>
+</div>
